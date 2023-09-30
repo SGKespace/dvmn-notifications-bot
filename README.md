@@ -25,8 +25,20 @@ python-telegram-bot==13.14
 PIP install -r requirement.txt
 ```
 
-# bot
-Собственно бот.
+# Запуск
+Обычный запуск без виртуального окружения:
+``` 
+python3 main.py.
+``` 
+
+Запуск через docker:
+
+[Установите docker](https://docs.docker.com/engine/install/debian/).
+Создаем контейнер с именем "app_name", а затем запускаем докер с именем "app_name" с переменными окружения из файла ".env".
+```
+docker build -t app_name 
+docker run -d --env-file ./.env -it --rm --name my-running-app app_name 
+```
 
 ## Отказ от ответственности
 
